@@ -55,7 +55,7 @@ function add_menu_item() {
     'nonce' => wp_create_nonce( 'wp_rest' ),
 ]);
   
-  add_menu_page( 'Cache Issue', 'Cache Issue', 'manage_options', 'hobby-trove',  function() {
+  add_menu_page( 'Cache Issue', 'Cache Issue', 'manage_options', 'cache-issue',  function() {
     ?>
         <div class="wrap">
           <div id="app">

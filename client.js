@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-const updateOption = function (root, nonce, optionName, value = '1') {
+const updateOption = function (root, nonce, optionName, value) {
   const data = {
     [optionName]: value
   }
