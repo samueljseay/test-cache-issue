@@ -5,14 +5,16 @@ document.addEventListener("DOMContentLoaded", function () {
   const fetchButton = document.getElementById('option-get-button');
   const optionName = document.getElementById('option-name');
   const loadingIndicator = document.getElementById('option-loading');
+  const optionValue = document.getElementById('option-value');
 
   updateButton.onclick = () => {
     const opt = optionName.value;
+    const val = optionValue.value;
     const optionSetResult = document.getElementById('option-set-result');
 
     loadingIndicator.setAttribute('style', 'display:block;');
 
-    updateOption(root, nonce, opt).then((response) => {
+    updateOption(root, nonce, opt, val).then((response) => {
       loadingIndicator.setAttribute('style', 'display:none;');
       optionSetResult.innerText = JSON.stringify(response);
 
@@ -38,7 +40,6 @@ const updateOption = function (root, nonce, optionName, value = '1') {
   const data = {
     [optionName]: value
   }
-
 
   return fetch(`${root}my_api/opts`, {
     method: 'POST',

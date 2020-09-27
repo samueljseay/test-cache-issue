@@ -59,10 +59,16 @@ function add_menu_item() {
     ?>
         <div class="wrap">
           <div id="app">
+            
             <p id="option-loading" style="display: none;">Working...</p>
             <h3>Step 1</h3>
+            <label for="#option-value">Value to set option to</label>
+            <input id="option-value" placeholder="Value to set" value="1">
+            <br>  
+            <br>  
+            <br>  
             <input id="option-name" placeholder="Add an option name"/>
-            <button id="option-update" >Add option with value of '1'</button>
+            <button id="option-update" >Add option with specified value</button>
             <p id="option-set-result"></p>
             
             <div id="get-options" style="display:none;">
